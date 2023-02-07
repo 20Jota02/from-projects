@@ -2,7 +2,8 @@
   <nav>
     <a class="logotipo" href="#">Tabla de Proyectos </a>
     <div class="enlaces">
-      <button class="cssbuttons-io-button"> Crear
+      <button class="cssbuttons-io-button" >
+         Crear
         <div class="icon">
           <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg>
         </div>
@@ -14,7 +15,7 @@
 
     <div class="card" *ngFor="let producto of productos">
       <div>
-        <img src="{{producto.image}}" alt="" class="card-image">
+        <img [src]="producto.image" alt="" class="card-image">
       </div>
       <div class="category"> {{producto.name}} </div>
       <div class="heading"> {{producto.descripcion}}
@@ -23,26 +24,49 @@
       <ul class="wrapper">
         <li class="icon facebook">
             <span class="tooltip">Eliminar</span>
-            <span><i class=""></i></span>
+            <span><i class="">
+              <img src="https://cdn-icons-png.flaticon.com/128/4337/4337066.png" alt="" style="width: 40px;">
+            </i></span>
         </li>
         <li class="icon twitter">
             <span class="tooltip">Editar</span>
-            <span><i class=""></i></span>
+            <span><i class="">
+              <img src="https://cdn-icons-png.flaticon.com/128/2921/2921222.png" alt=""style="width: 40px;">
+            </i></span>
         </li>
 
     </ul>
   </div>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookmarkModal">gjgkd</button>
 
 
-
-
-
-
-
-
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
   </section>
+
+
 

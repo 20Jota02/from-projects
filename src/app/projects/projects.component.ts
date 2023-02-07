@@ -12,7 +12,7 @@ export class ProjectsComponent {
 
   constructor(
     private projectsService: ProjectsService
-  ){
+  ) {
 
 this.projectsService.getProjects().subscribe((resp:any) =>{
   console.log(resp)
